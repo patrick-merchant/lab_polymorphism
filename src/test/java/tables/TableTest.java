@@ -16,7 +16,7 @@ public class TableTest {
     public void setUp(){
         table = new Table();
         table.addToOrder(new Starter("Nachos", 8.95, "Dairy", true));
-        table.addToOrder(new MainCourse("Chilli con Carne", 10.95, "None"));
+        table.addToOrder(new MainCourse("Chilli con Carne", 10.95, "None", false));
         table.addToOrder(new Dessert("Sticky Toffee Pudding", 5.95, "Eggs, Dairy, Gluten"));
     }
 
@@ -24,7 +24,9 @@ public class TableTest {
     public void addsToOrder(){
         assertThat(table.getOrder().size()).isEqualTo(3);
     }
-    
+
+
+
 
 //    @Test
 //    public void canGetBill(){

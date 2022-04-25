@@ -12,12 +12,17 @@ public class MainCourseTest {
     @BeforeEach
     public void setUp(){
         Table table = new Table();
-        mainCourse = new MainCourse("Chilli con Carne", 10.95, "None");
+        mainCourse = new MainCourse("Chilli con Carne", 10.95, "None", false);
     }
 
     @Test
     public void canGetPrice(){
         assertThat(mainCourse.getPrice()).isEqualTo(10.95);
+    }
+
+    @Test
+    public void hasUniqueMCProperty(){
+        assertThat(mainCourse.getCanAddChips()).isEqualTo(false);
     }
 
 }

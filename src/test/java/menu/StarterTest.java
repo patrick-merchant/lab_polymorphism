@@ -20,4 +20,10 @@ public class StarterTest {
         assertThat(starter.getPrice()).isEqualTo(3.50);
     }
 
+
+    @Test
+    public void hasUniqueSProperty(){
+        assertThat(starter.getIsShareable()).isEqualTo(false);
+    }
+
 }
