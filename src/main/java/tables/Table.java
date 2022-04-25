@@ -20,16 +20,20 @@ public class Table {
         this.order.add(menuItem);
     }
 
-//    public double calculateBillPrice() {
-//        double sum = 0;
-//        for (int i=0; i < this.order.size(); i++){
-//            sum += this.order.get(i).getPrice();
-//        }
-//        return sum;
-//
-//    }
+    public double calculateBillPrice() {
+        double sum = 0;
+        for (int i=0; i < this.order.size(); i++){
+            sum += this.order.get(i).getPrice();
+        }
+        return sum;
+    }
 
-
+    public String getOrderDescriptions() {
+        String desc = new String();
+        for (int i = 0; i < this.order.size(); i++) {
+            desc = this.order.get(i).getDescription();
+        }
+        return desc;
 
 
 //
@@ -41,5 +45,4 @@ public class Table {
 //        System.out.println(customRequests);
 //    }
 
-
-}
+    }}

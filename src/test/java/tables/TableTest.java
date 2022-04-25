@@ -28,9 +28,14 @@ public class TableTest {
 
 
 
-//    @Test
-//    public void canGetBill(){
-//        assertThat(calculateBillPrice()).isEqualTo(25.85);
-////        assertThat(getOrderDescriptions()).isEqualTo();
-//    }
+    @Test
+    public void canGetBill(){
+        assertThat(table.calculateBillPrice()).isGreaterThan(25.84);
+        assertThat(table.calculateBillPrice()).isLessThan(25.86);
+    }
+
+    @Test
+    public void canGetOrderDescriptions() {
+        assertThat(table.getOrderDescriptions()).isEqualTo("Nachos");
+    }
 }

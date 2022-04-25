@@ -15,6 +15,10 @@ public abstract class MenuItem {
         return this.price;
     }
 
+    public String getDescription() {
+        return this.description;
+    }
+
 
 
 }
