@@ -36,6 +36,6 @@ public class TableTest {
 
     @Test
     public void canGetOrderDescriptions() {
-        assertThat(table.getOrderDescriptions()).isEqualTo("Nachos");
+        assertThat(table.getOrderDescriptions()).isEqualTo("Nachos, Chilli con Carne, Sticky Toffee Pudding");
     }
 }

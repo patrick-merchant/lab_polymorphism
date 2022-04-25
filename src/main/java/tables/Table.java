@@ -29,9 +29,11 @@ public class Table {
     }
 
     public String getOrderDescriptions() {
-        String desc = new String();
+        String desc = "";
         for (int i = 0; i < this.order.size(); i++) {
-            desc = this.order.get(i).getDescription();
+            if(i < this.order.size()-1) {
+                desc = desc + (this.order.get(i).getDescription()) + ", ";
+            } else desc = desc + (this.order.get(i).getDescription());
         }
         return desc;
 
