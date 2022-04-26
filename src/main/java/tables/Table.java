@@ -1,4 +1,4 @@
-package pubs;
+package tables;
 
 import interfaces.IGetBill;
 import menu.MenuItem;
@@ -21,6 +21,8 @@ public class Table implements IGetBill {
     public void addToOrder(MenuItem menuItem){
         this.tableOrder.add(menuItem);
     }
+
+
 
     public double calculateOrderPrice() {
         double sum = 0;

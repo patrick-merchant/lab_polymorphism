@@ -10,10 +10,10 @@ public abstract class MenuItem {
         this.price = price;
         this.allergens = allergens;
     }
-
     public double getPrice(){
         return this.price;
     }
+
 
     public String getDescription() {
         return this.description;

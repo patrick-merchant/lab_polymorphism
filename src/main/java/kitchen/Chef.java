@@ -1,6 +1,6 @@
 package kitchen;
 
-import pubs.Table;
+import tables.Table;
 
 import java.util.LinkedList;
 

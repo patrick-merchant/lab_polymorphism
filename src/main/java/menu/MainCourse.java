@@ -24,4 +24,5 @@ public class MainCourse extends MenuItem {
         MainCourse customMain = new MainCourse(customDescription, customPrice, getAllergens(), getCanAddChips());
         return customMain;
     }
+
 }

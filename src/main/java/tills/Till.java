@@ -1,4 +1,4 @@
-package pubs;
+package tills;
 
 import interfaces.IGetBill;
 import menu.MenuItem;

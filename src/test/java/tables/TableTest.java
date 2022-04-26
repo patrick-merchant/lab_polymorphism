@@ -6,7 +6,6 @@ import menu.MainCourse;
 import menu.Starter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import pubs.Table;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
