@@ -21,21 +21,27 @@ public class TableTest {
     }
 
     @Test
-    public void addsToOrder(){
+    public void hasOrder(){
         assertThat(table.getOrder().size()).isEqualTo(3);
     }
 
-
-
-
     @Test
-    public void canGetBill(){
-        assertThat(table.calculateBillPrice()).isGreaterThan(25.84);
-        assertThat(table.calculateBillPrice()).isLessThan(25.86);
+    public void canCalculateOrderPrice(){
+        // Currently calculateBillPrice() returns long decimal, very near to the price I want.
+        // This is something to do with the way I have summed 3 double primitives or values.
+//        assertThat(table.calculateOrderPrice()).isGreaterThan(25.84);
+//        assertThat(table.calculateOrderPrice()).isLessThan(25.86);
+        // I think I have solved this, but will leave it here just in case.
+        assertThat(table.calculateOrderPrice()).isEqualTo(25.85);
     }
 
     @Test
     public void canGetOrderDescriptions() {
         assertThat(table.getOrderDescriptions()).isEqualTo("Nachos, Chilli con Carne, Sticky Toffee Pudding");
+    }
+
+    @Test
+    public void canGetBill() {
+        assertThat(table.getBill(table.getOrderDescriptions(), table.calculateOrderPrice())).isEqualTo("Nachos, Chilli con Carne, Sticky Toffee Pudding" + 25.85);
     }
 }

@@ -11,4 +11,17 @@ public class MainCourse extends MenuItem {
     public boolean getCanAddChips() {
         return canAddChips;
     }
+
+    @Override
+    public MenuItem getOrderForTwo(){
+        String descriptionTwoPlates = this.getDescription() + " (two plates)";
+        MainCourse mainForTwo = new MainCourse(descriptionTwoPlates, price, getAllergens(), getCanAddChips());
+        return mainForTwo;
+    }
+
+    @Override
+    public MenuItem getOrderForTwo(String customDescription, double customPrice){
+        MainCourse customMain = new MainCourse(customDescription, customPrice, getAllergens(), getCanAddChips());
+        return customMain;
+    }
 }

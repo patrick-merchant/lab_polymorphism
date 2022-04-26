@@ -2,11 +2,12 @@ package tables;
 
 import menu.MenuItem;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Table {
-    List<MenuItem> order;
+    private List<MenuItem> order;
 
     public Table(){
         order = new ArrayList<>();
@@ -20,31 +21,29 @@ public class Table {
         this.order.add(menuItem);
     }
 
-    public double calculateBillPrice() {
+    public double calculateOrderPrice() {
         double sum = 0;
         for (int i=0; i < this.order.size(); i++){
             sum += this.order.get(i).getPrice();
         }
+        DecimalFormat df = new DecimalFormat("#.##");
+        sum = Double.valueOf(df.format(sum));
         return sum;
+
     }
 
     public String getOrderDescriptions() {
         String desc = "";
         for (int i = 0; i < this.order.size(); i++) {
-            if(i < this.order.size()-1) {
+            if (i < this.order.size() - 1) {
                 desc = desc + (this.order.get(i).getDescription()) + ", ";
             } else desc = desc + (this.order.get(i).getDescription());
         }
         return desc;
+    }
 
+    public String getBill(String desc, double sum) {
+        return desc + sum;
+    }
 
-//
-//    @Override
-//    // The below overload method is suitable for customers who want to make changes to their order.
-//    // It will add the item to the order, but also print any custom requests for the kitchen to see.
-//    public void addToOrder(MenuItem menuItem, String customRequests){
-//        this.order.add(menuItem);
-//        System.out.println(customRequests);
-//    }
-
-    }}
+}

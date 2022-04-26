@@ -1,6 +1,5 @@
 package kitchen;
 
-import menu.MenuItem;
 import tables.Table;
 
 import java.util.LinkedList;

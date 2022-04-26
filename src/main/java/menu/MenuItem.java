@@ -19,6 +19,11 @@ public abstract class MenuItem {
         return this.description;
     }
 
+    public String getAllergens() {
+        return allergens;
+    }
 
+    public abstract MenuItem getOrderForTwo();
 
+    public abstract MenuItem getOrderForTwo(String customDescription, double customPrice);
 }
