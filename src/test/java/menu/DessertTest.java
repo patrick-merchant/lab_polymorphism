@@ -2,7 +2,7 @@ package menu;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import tables.Table;
+import pubs.Table;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 

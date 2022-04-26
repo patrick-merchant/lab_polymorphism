@@ -1,10 +1,12 @@
 package tables;
 
 import menu.Dessert;
+import menu.Drink;
 import menu.MainCourse;
 import menu.Starter;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import pubs.Table;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -43,5 +45,12 @@ public class TableTest {
     @Test
     public void canGetBill() {
         assertThat(table.getBill(table.getOrderDescriptions(), table.calculateOrderPrice())).isEqualTo("Nachos, Chilli con Carne, Sticky Toffee Pudding" + 25.85);
+    }
+
+    @Test
+    public void canAddDrinkToOrder(){
+        table.addToOrder(new Drink("Guinness", 4.90, "None"));
+        assertThat(table.getOrder().size()).isEqualTo(4);
+        assertThat(table.calculateOrderPrice()).isEqualTo(30.75);
     }
 }
